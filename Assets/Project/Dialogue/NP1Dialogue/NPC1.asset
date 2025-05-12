@@ -12,3 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771f7ab6cd20ad74b99aa3483ff48bd0, type: 3}
   m_Name: NPC1
   m_EditorClassIdentifier: 
+  dialogueNodes:
+  - {fileID: 11400000, guid: b277551790652dc4792767aede6ae792, type: 2}
+  - {fileID: 11400000, guid: 1c05a0bb71592304e88fc54e56ca4e59, type: 2}
+  - {fileID: 11400000, guid: 4933c8f2e32cb5c43b56d7b306a0b949, type: 2}
+  - {fileID: 11400000, guid: 176207df8482b1d4f91ee166b9f5f95e, type: 2}
+  - {fileID: 11400000, guid: 2d8ef6dc11a8b3f4a9edf77a885f7655, type: 2}
+  - {fileID: 11400000, guid: ea5696009ce63244bb9df2ef2ad79fbb, type: 2}
+  - {fileID: 11400000, guid: 8ef6ca706d550e149971b4840c49289a, type: 2}
+  - {fileID: 11400000, guid: 0324be6087407554e944bf875d87f52b, type: 2}
+  - {fileID: 11400000, guid: 993fe4757bc6ee04da51bd7dab5e57b6, type: 2}
+  - {fileID: 11400000, guid: e878c41e397f0ef4885a57cf25612f19, type: 2}
+  - {fileID: 11400000, guid: bf88e67c2e3a2bb4b9595b7b5aa0c2f3, type: 2}

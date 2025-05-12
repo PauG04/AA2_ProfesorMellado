@@ -1,11 +1,25 @@
 using UnityEngine;
 using System.Collections;
 
-public class InteractableObject : MonoBehaviour
+public class ActivePuzzle1 : Interact
 {
     [SerializeField] private GameObject interactToActive;
     [SerializeField] private Transform uiParent;
     [SerializeField] private float growDuration;
+
+    public override void DoAction()
+    {
+        Interact();
+        currentDialogue++;
+        NextDialogue();
+        canvas.SetActive(false);
+        playerController.ChangeState(PlayerState.PUZZLE);
+    }
+
+    public override void EndConversation()
+    {
+
+    }
 
     public void Interact()
     {

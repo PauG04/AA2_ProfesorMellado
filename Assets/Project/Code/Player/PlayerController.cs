@@ -1,6 +1,6 @@
 using UnityEngine;
 
-enum PlayerState {MOVE, INTERACT, WAIT}
+public enum PlayerState {MOVE, INTERACT, WAIT, PUZZLE}
 public class PlayerController : MonoBehaviour
 {
     private PlayerState playerState;
@@ -15,12 +15,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float interactionDistance = 1f;
     [SerializeField] private LayerMask interactableLayer;
 
+    private Interact currentInteract;
+    private bool canInteract;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         lastMoveDir = Vector2.down;
         playerState = PlayerState.WAIT;
+        currentInteract = null;
     }
 
     void Update()
@@ -40,7 +44,10 @@ public class PlayerController : MonoBehaviour
             case PlayerState.WAIT:
                 Wait();
                 break;
-            case PlayerState.INTERACT:  
+            case PlayerState.INTERACT:
+                Interact();
+                break;
+            case PlayerState.PUZZLE:
                 break;
         }
     }
@@ -85,6 +92,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Interact()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && currentInteract != null && canInteract)
+        {
+            currentInteract.NextDialogue();
+        }
+
+    }
+
     void InteractObject()
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerState != PlayerState.INTERACT)
@@ -92,14 +108,17 @@ public class PlayerController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(rb.position, lastMoveDir, interactionDistance, interactableLayer);
             if (hit.collider != null)
             {
-                ChangeState(PlayerState.INTERACT);
-
-                if (hit.collider.gameObject.TryGetComponent<InteractableObject>(out InteractableObject interactable))
-                    interactable.Interact();
+                if (hit.collider.gameObject.TryGetComponent<Interact>(out Interact interactable))
+                {
+                    ChangeState(PlayerState.INTERACT);
+                    currentInteract = interactable;
+                    currentInteract.InteractObject();
+                }
             }
         }
     }
-    void ChangeState(PlayerState newState)
+
+    public void ChangeState(PlayerState newState)
     {
         switch (playerState)
         {
@@ -108,21 +127,33 @@ public class PlayerController : MonoBehaviour
                 break;
             case PlayerState.WAIT:
                 break;
-            case PlayerState.INTERACT:  
+            case PlayerState.INTERACT:
+                break;
+            case PlayerState.PUZZLE:
                 break;
         }
-        
-        playerState = newState; 
-        
+
+        playerState = newState;
+
         switch (playerState)
         {
             case PlayerState.MOVE:
                 animator.SetBool("IsMoving", true);
                 break;
             case PlayerState.WAIT:
+                currentInteract = null;
                 break;
-            case PlayerState.INTERACT:  
+            case PlayerState.INTERACT:
+                canInteract = false;
+                Invoke("SetCanInteract", 0.5f);
+                break;
+            case PlayerState.PUZZLE:
                 break;
         }
+    }
+
+    private void SetCanInteract()
+    {
+        canInteract = true;
     }
 }
