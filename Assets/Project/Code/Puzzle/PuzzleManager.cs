@@ -4,8 +4,8 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager Instance { get; private set; }
 
-    [SerializeField] private GameObject CanvasWin;
-    [SerializeField] private GameObject CanvasLose;
+    //[SerializeField] private GameObject CanvasWin;
+    //[SerializeField] private GameObject CanvasLose;
 
     public int puzzlesCompleted;
     public int points;
@@ -33,12 +33,12 @@ public class PuzzleManager : MonoBehaviour
         points += puzzlePoints;
         streak++;
         puzzlesCompleted++;
-        CanvasWin.SetActive(true);
+        //CanvasWin.SetActive(true);
     }
 
     public void LosePuzzle()
     {
         streak = 0;
-        CanvasLose.SetActive(true);
+        //CanvasLose.SetActive(true);
     }
 }

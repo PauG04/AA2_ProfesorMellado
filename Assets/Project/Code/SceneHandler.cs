@@ -5,9 +5,6 @@ public class SceneHandler : MonoBehaviour
 {
     public static SceneHandler Instance { get; private set; }
 
-    [SerializeField] private GameObject CanvasWin;
-    [SerializeField] private GameObject CanvasLose;
-
     private void Awake()
     {
         if (Instance == null)

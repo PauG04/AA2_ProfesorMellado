@@ -93,6 +93,9 @@ public class PlayerController : MonoBehaviour
             if (hit.collider != null)
             {
                 ChangeState(PlayerState.INTERACT);
+
+                if (hit.collider.gameObject.TryGetComponent<InteractableObject>(out InteractableObject interactable))
+                    interactable.Interact();
             }
         }
     }
