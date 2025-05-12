@@ -7,6 +7,11 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private GameObject CanvasWin;
     [SerializeField] private GameObject CanvasLose;
 
+    public int puzzlesCompleted;
+    public int points;
+    public int streak;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -17,15 +22,23 @@ public class PuzzleManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        puzzlesCompleted = 0;
+        points = 0;
+        streak = 0;
     }
 
-    public void WinPuzzle()
+    public void WinPuzzle(int puzzlePoints)
     {
+        points += puzzlePoints;
+        streak++;
+        puzzlesCompleted++;
         CanvasWin.SetActive(true);
     }
 
     public void LosePuzzle()
     {
+        streak = 0;
         CanvasLose.SetActive(true);
     }
 }
