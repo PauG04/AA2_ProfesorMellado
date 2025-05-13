@@ -5,14 +5,17 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager Instance { get; private set; }
 
-    //[SerializeField] private GameObject CanvasWin;
-    //[SerializeField] private GameObject CanvasLose;
+    [SerializeField] private GameObject CanvasWin;
+    [SerializeField] private GameObject CanvasLose;
 
-    public int puzzlesCompleted;
-    public int points;
-    public int streak;
+    [HideInInspector] public int puzzlesCompleted;
+    [HideInInspector] public int points;
+    [HideInInspector] public int streak;
+    [HideInInspector] public int currentPuzzle;
 
-    public List<(int maxPoints, int currentPoints)> puzzlePoints;
+    public List<int> maxPoints;
+    [HideInInspector] public List<int> puzzlePoints;
+    [HideInInspector] public List<bool> puzzleCompleted;
 
     private void Awake()
     {
@@ -28,29 +31,44 @@ public class PuzzleManager : MonoBehaviour
         puzzlesCompleted = 0;
         points = 0;
         streak = 0;
+        currentPuzzle = 0;
 
-        for (int i = 0; i < puzzlePoints.Count; i++)
+        foreach (int puzzle in maxPoints)
         {
-            var points = puzzlePoints[i];
-            points.currentPoints = points.maxPoints;
-            puzzlePoints[i] = points;
+            puzzlePoints.Add(puzzle);
+            puzzleCompleted.Add(false);
         }
     }
 
-    public void WinPuzzle(int puzzleIterator)
+    public void WinPuzzle(Transform parent)
     {
-        points += puzzlePoints[puzzleIterator].currentPoints;
+        puzzleCompleted[currentPuzzle] = true;
+        points += puzzlePoints[currentPuzzle] * streak;
         streak++;
         puzzlesCompleted++;
-        //CanvasWin.SetActive(true);
+        Instantiate(CanvasWin, parent);
     }
 
-    public void LosePuzzle(int puzzleIterator)
+    public void LosePuzzle(Transform parent)
     {
         streak = 0;
-        (int maxPoints, int currentPoints) points = puzzlePoints[puzzleIterator];
-        points.currentPoints -= 5;
-        puzzlePoints[puzzleIterator] = points;
-        //CanvasLose.SetActive(true);
+        if (puzzlePoints[currentPuzzle] > maxPoints[currentPuzzle] - 15)
+            puzzlePoints[currentPuzzle] -= 5;
+        Instantiate(CanvasLose, parent);
+    }
+
+    public string LoseText()
+    {
+        return puzzlePoints[currentPuzzle].ToString() + "/" + maxPoints[currentPuzzle].ToString();
+    }
+
+    public int GetCurrentPuzzlePoints()
+    {
+        return puzzlePoints[currentPuzzle];
+    }
+
+    public bool GetCurrentPuzzleIsCompleted()
+    {
+        return puzzleCompleted[currentPuzzle];
     }
 }

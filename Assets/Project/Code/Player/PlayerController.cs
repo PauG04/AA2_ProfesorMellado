@@ -3,8 +3,10 @@ using UnityEngine;
 public enum PlayerState {MOVE, INTERACT, WAIT, PUZZLE}
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance { get; private set; }
+
     private PlayerState playerState;
-    
+
     [SerializeField] private float moveSpeed;
 
     private Rigidbody2D rb;
@@ -20,6 +22,15 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         lastMoveDir = Vector2.down;

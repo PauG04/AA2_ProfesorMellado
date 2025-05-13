@@ -5971,9 +5971,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836cf584df18a6d42b0bcd65bab1fda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanvasWin: {fileID: 8401740511828276784, guid: 0637befd167215746bee4494926b8766, type: 3}
+  CanvasLose: {fileID: 5456580983062559692, guid: ee1845c736d8a8d4e8111de891093eb2, type: 3}
   puzzlesCompleted: 0
   points: 0
   streak: 0
+  currentPuzzle: 0
+  maxPoints: 19000000
+  puzzlePoints: 
 --- !u!4 &640067406
 Transform:
   m_ObjectHideFlags: 0

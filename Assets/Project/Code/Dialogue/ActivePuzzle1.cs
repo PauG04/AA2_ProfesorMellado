@@ -23,6 +23,14 @@ public class ActivePuzzle1 : Interact
 
     }
 
+    public override void InteractObject()
+    {
+        if (!PuzzleManager.Instance.GetCurrentPuzzleIsCompleted())
+            base.InteractObject();
+        else
+            PlayerController.Instance.ChangeState(PlayerState.MOVE);
+    }
+
     public void Interact()
     {
         GameObject obj = Instantiate(interactToActive, uiParent);

@@ -5830,8 +5830,8 @@ Canvas:
   m_GameObject: {fileID: 832505902}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 602298007}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5841,7 +5841,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1688039217
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &832505906
@@ -5924,7 +5924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: be625f1908e20dc4faf91e928253573f, type: 3}
+  m_Sprite: {fileID: 791336545582589345, guid: be625f1908e20dc4faf91e928253573f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6321,7 +6321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: be625f1908e20dc4faf91e928253573f, type: 3}
+  m_Sprite: {fileID: 791336545582589345, guid: be625f1908e20dc4faf91e928253573f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15335,7 +15335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: be625f1908e20dc4faf91e928253573f, type: 3}
+  m_Sprite: {fileID: 791336545582589345, guid: be625f1908e20dc4faf91e928253573f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15855,7 +15855,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.031899452, y: 0.0010883808}
+  m_Offset: {x: 0.086033106, y: 0.0010883808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15865,7 +15865,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.81657887, y: 1.0021768}
+  m_Size: {x: 0.70831156, y: 1.0021768}
   m_EdgeRadius: 0
 --- !u!114 &1902566136
 MonoBehaviour:

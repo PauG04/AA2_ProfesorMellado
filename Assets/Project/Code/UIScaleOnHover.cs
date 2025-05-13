@@ -21,13 +21,13 @@ public class UIScaleOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         transform.localScale = originalScale;
     }
 
-    public void WinPuzzle()
+    public void WinPuzzle(Transform parent)
     {
-        //PuzzleManager.Instance.WinPuzzle();
+        PuzzleManager.Instance.WinPuzzle(parent);
     }
 
-    public void LosePuzzle()
+    public void LosePuzzle(Transform parent)
     {
-        //PuzzleManager.Instance.LosePuzzle();
+        PuzzleManager.Instance.LosePuzzle(parent);
     }
 }

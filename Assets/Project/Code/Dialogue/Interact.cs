@@ -19,7 +19,7 @@ public class Interact : MonoBehaviour
 
     protected bool canEnd;
 
-    public void InteractObject()
+    public virtual void InteractObject()
     {
         canvas.SetActive(true);
         currentDialogue = 0;

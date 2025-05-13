@@ -199,10 +199,10 @@ MonoBehaviour:
       - m_Target: {fileID: 7745492541823205204}
         m_TargetAssemblyTypeName: UIScaleOnHover, Assembly-CSharp
         m_MethodName: LosePuzzle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7779825281573025671}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -561,10 +561,10 @@ MonoBehaviour:
       - m_Target: {fileID: 7745492541823205204}
         m_TargetAssemblyTypeName: UIScaleOnHover, Assembly-CSharp
         m_MethodName: WinPuzzle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7779825281573025671}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -707,10 +707,10 @@ MonoBehaviour:
       - m_Target: {fileID: 7745492541823205204}
         m_TargetAssemblyTypeName: UIScaleOnHover, Assembly-CSharp
         m_MethodName: LosePuzzle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7779825281573025671}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -853,10 +853,10 @@ MonoBehaviour:
       - m_Target: {fileID: 7745492541823205204}
         m_TargetAssemblyTypeName: UIScaleOnHover, Assembly-CSharp
         m_MethodName: LosePuzzle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7779825281573025671}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1250,10 +1250,10 @@ MonoBehaviour:
       - m_Target: {fileID: 7745492541823205204}
         m_TargetAssemblyTypeName: UIScaleOnHover, Assembly-CSharp
         m_MethodName: LosePuzzle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7779825281573025671}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
