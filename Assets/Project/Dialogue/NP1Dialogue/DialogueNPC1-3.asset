@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueType: 1
   dialogueSpeaker: 0
-  dialogueText: "Curiosa forma de hablar. \xBFQuiere decir que no hay un horario
-    fijo?"
+  dialogueText: Curiosa forma de hablar. Quiere decir que no hay un horario fijo?

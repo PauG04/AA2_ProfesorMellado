@@ -13,6 +13,8 @@ public class ActivePuzzle1 : Interact
         currentDialogue++;
         NextDialogue();
         canvas.SetActive(false);
+        profesorIndication.SetActive(false);
+        NPCIndication.SetActive(false);
         playerController.ChangeState(PlayerState.PUZZLE);
     }
 

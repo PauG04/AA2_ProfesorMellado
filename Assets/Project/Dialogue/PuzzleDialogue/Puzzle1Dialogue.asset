@@ -16,3 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d5aa516ae7b10d44b05d06aeafea2d1, type: 2}
   - {fileID: 11400000, guid: c82338bcd5948384cb1289789aab981f, type: 2}
   - {fileID: 11400000, guid: ba794cc834a45284f9a7bbb46c430218, type: 2}
+  interactableName: Map

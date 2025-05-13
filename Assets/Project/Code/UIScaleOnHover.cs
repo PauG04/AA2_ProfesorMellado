@@ -28,6 +28,6 @@ public class UIScaleOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void LosePuzzle()
     {
-        PuzzleManager.Instance.LosePuzzle();
+        //PuzzleManager.Instance.LosePuzzle();
     }
 }

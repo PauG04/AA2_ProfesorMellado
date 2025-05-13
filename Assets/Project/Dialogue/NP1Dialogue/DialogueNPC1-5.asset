@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueType: 1
   dialogueSpeaker: 0
-  dialogueText: "\xBFLos muros?"
+  dialogueText: Los muros?

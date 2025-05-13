@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueType: 1
   dialogueSpeaker: 1
-  dialogueText: "\xBFSaint Elouan, dice? En este and\xE9n los trenes vienen\u2026
-    y van\u2026 como sombras que se desvanecen en la niebla. Algunos llegan temprano.
-    Otros\u2026 nunca."
+  dialogueText: "Sevilla, dice? En este and\xE9n los trenes vienen\u2026 y van\u2026
+    como sombras que se desvanecen en la niebla. Algunos llegan temprano. Otros\u2026
+    nunca."

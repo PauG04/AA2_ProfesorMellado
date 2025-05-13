@@ -4,4 +4,5 @@ using UnityEngine;
 public class Dialogues : ScriptableObject
 {
     public List<DialogueNode> dialogueNodes = new List<DialogueNode>();
+    public string interactableName; 
 }

@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case PlayerState.INTERACT:
                 canInteract = false;
-                Invoke("SetCanInteract", 0.5f);
+                Invoke("SetCanInteract", 0.15f);
                 break;
             case PlayerState.PUZZLE:
                 break;

@@ -7,6 +7,9 @@ public class Interact : MonoBehaviour
     [SerializeField] protected GameObject canvas;
     [SerializeField] protected TextMeshProUGUI textBox;
     [SerializeField] protected Dialogues dialogue;
+    [SerializeField] protected GameObject profesorIndication;
+    [SerializeField] protected GameObject NPCIndication;
+    [SerializeField] protected TextMeshProUGUI NPCtext;
 
     [SerializeField] protected PlayerController playerController;
 
@@ -22,6 +25,7 @@ public class Interact : MonoBehaviour
         currentDialogue = 0;
         canEnd = false;
         isTyping = false;
+        NPCtext.text = dialogue.interactableName;
         NextDialogue();
     }
 
@@ -53,6 +57,18 @@ public class Interact : MonoBehaviour
                 DoAction();
                 break;
             case DialogueType.DIALOGUE:
+
+                if(dialogue.dialogueNodes[currentDialogue].dialogueSpeaker == DialogueSpeaker.PLAYER)
+                {
+                    profesorIndication.SetActive(true);
+                    NPCIndication.SetActive(false);
+                }
+                else
+                {
+                    profesorIndication.SetActive(false);
+                    NPCIndication.SetActive(true);
+                }
+
                 if (typingCoroutine != null) StopCoroutine(typingCoroutine);
                 typingCoroutine = StartCoroutine(TypeText(node.dialogueText));
                 break;
@@ -92,6 +108,8 @@ public class Interact : MonoBehaviour
     public virtual void EndConversation()
     {
         canvas.SetActive(false);
+        profesorIndication.SetActive(false);
+        NPCIndication.SetActive(false);
         playerController.ChangeState(PlayerState.WAIT);
     }
 

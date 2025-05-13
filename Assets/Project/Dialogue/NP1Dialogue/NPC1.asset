@@ -24,3 +24,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 993fe4757bc6ee04da51bd7dab5e57b6, type: 2}
   - {fileID: 11400000, guid: e878c41e397f0ef4885a57cf25612f19, type: 2}
   - {fileID: 11400000, guid: bf88e67c2e3a2bb4b9595b7b5aa0c2f3, type: 2}
+  interactableName: Antonio
