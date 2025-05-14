@@ -14,7 +14,7 @@ public class WinPanel : MonoBehaviour
 
     public void DestroyParent()
     {
-        PlayerController.Instance.ChangeState(PlayerState.MOVE);
+        PlayerController.Instance.ChangeState(PlayerState.WAIT_TRAIN);
         Destroy(transform.parent.gameObject);
     }
 }

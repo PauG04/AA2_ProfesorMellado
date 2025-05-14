@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Project/Scenes/MainMenu.unity
+    guid: 08de0c98d2907924d82366989ce873af
+  - enabled: 1
     path: Assets/Project/Scenes/Station.unity
     guid: eafe6254e6f41a24f8b560339291972b
+  - enabled: 1
+    path: Assets/Project/Scenes/Train.unity
+    guid: 7d67bcefea746d041a30079b3c385ac2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

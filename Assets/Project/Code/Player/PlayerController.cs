@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum PlayerState {MOVE, INTERACT, WAIT, PUZZLE}
+public enum PlayerState {MOVE, INTERACT, WAIT, PUZZLE, WAIT_TRAIN}
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     private Interact currentInteract;
     private bool canInteract;
+
+    [SerializeField] private MoveTrain moveTrain;
 
     void Awake()
     {
@@ -59,6 +61,8 @@ public class PlayerController : MonoBehaviour
                 Interact();
                 break;
             case PlayerState.PUZZLE:
+                break;
+            case PlayerState.WAIT_TRAIN:
                 break;
         }
     }
@@ -142,6 +146,8 @@ public class PlayerController : MonoBehaviour
                 break;
             case PlayerState.PUZZLE:
                 break;
+            case PlayerState.WAIT_TRAIN:
+                break;
         }
 
         playerState = newState;
@@ -159,6 +165,12 @@ public class PlayerController : MonoBehaviour
                 Invoke("SetCanInteract", 0.15f);
                 break;
             case PlayerState.PUZZLE:
+                break;
+            case PlayerState.WAIT_TRAIN:
+                if (moveTrain == null)
+                    ChangeState(PlayerState.MOVE);
+                else
+                    moveTrain.StartTrainAnimation();
                 break;
         }
     }
