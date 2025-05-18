@@ -221,6 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverScale: 1.25
+  hoverClip: {fileID: 8300000, guid: d7225137294c3424b8ca973f2f56823a, type: 3}
+  win: {fileID: 8300000, guid: 0e3790b627618f34ebaef15597e9041a, type: 3}
+  lose: {fileID: 8300000, guid: 2b0f2ee955bd092449508dcb96708778, type: 3}
 --- !u!1 &1689576566324729152
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +586,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverScale: 1.25
+  hoverClip: {fileID: 8300000, guid: d7225137294c3424b8ca973f2f56823a, type: 3}
+  win: {fileID: 8300000, guid: 0e3790b627618f34ebaef15597e9041a, type: 3}
+  lose: {fileID: 8300000, guid: 2b0f2ee955bd092449508dcb96708778, type: 3}
 --- !u!1 &4391922259575602330
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverScale: 1.25
+  hoverClip: {fileID: 8300000, guid: d7225137294c3424b8ca973f2f56823a, type: 3}
+  win: {fileID: 8300000, guid: 0e3790b627618f34ebaef15597e9041a, type: 3}
+  lose: {fileID: 8300000, guid: 2b0f2ee955bd092449508dcb96708778, type: 3}
 --- !u!1 &4432609170486801064
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +884,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverScale: 1.25
+  hoverClip: {fileID: 8300000, guid: d7225137294c3424b8ca973f2f56823a, type: 3}
+  win: {fileID: 8300000, guid: 0e3790b627618f34ebaef15597e9041a, type: 3}
+  lose: {fileID: 8300000, guid: 2b0f2ee955bd092449508dcb96708778, type: 3}
 --- !u!1 &4828225304235024046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1284,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverScale: 1.25
+  hoverClip: {fileID: 8300000, guid: d7225137294c3424b8ca973f2f56823a, type: 3}
+  win: {fileID: 8300000, guid: 0e3790b627618f34ebaef15597e9041a, type: 3}
+  lose: {fileID: 8300000, guid: 2b0f2ee955bd092449508dcb96708778, type: 3}
 --- !u!1 &8075208305758263360
 GameObject:
   m_ObjectHideFlags: 0

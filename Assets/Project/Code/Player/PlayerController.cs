@@ -175,8 +175,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SetDirection()
+    {
+        movement = Vector2.zero; 
+        lastMoveDir = new Vector2(0, -1);
+        animator.SetFloat("MoveX", 0);
+        animator.SetFloat("MoveY", 0);
+        animator.SetFloat("LastMoveX", lastMoveDir.x);
+        animator.SetFloat("LastMoveY", lastMoveDir.y);
+    }
+
     private void SetCanInteract()
     {
+
         canInteract = true;
     }
 }

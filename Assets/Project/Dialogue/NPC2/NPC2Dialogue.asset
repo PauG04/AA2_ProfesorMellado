@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771f7ab6cd20ad74b99aa3483ff48bd0, type: 3}
+  m_Name: NPC2Dialogue
+  m_EditorClassIdentifier: 
+  dialogueNodes:
+  - {fileID: 11400000, guid: e9e08f9600b6d08428c2ee18cc485f71, type: 2}
+  - {fileID: 11400000, guid: 3a70f2841bf275f4498c9f6461d7370f, type: 2}
+  - {fileID: 11400000, guid: 25bc1afc7f0611347a869b9ff2c590bd, type: 2}
+  - {fileID: 11400000, guid: 8c226276650248d4a8cc0402eb55b553, type: 2}
+  - {fileID: 11400000, guid: d1fe1e05f1413354793aa215fb6d1103, type: 2}
+  - {fileID: 11400000, guid: d0f276dd5834d114eafae9221254f784, type: 2}
+  - {fileID: 11400000, guid: ef8b3d7204200934789d7096c85f8215, type: 2}
+  - {fileID: 11400000, guid: bfe0f77f977dab54fadc62adf90b287d, type: 2}
+  - {fileID: 11400000, guid: 0d2590da9dc20b94883285c27eff8aba, type: 2}
+  interactableName: Ana
