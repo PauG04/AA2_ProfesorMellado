@@ -7,6 +7,9 @@ public class ActivePuzzle1 : Interact
     [SerializeField] private Transform uiParent;
     [SerializeField] private float growDuration;
 
+    [SerializeField] private AudioClip puzzelMusic;
+    [SerializeField] private AudioClip puzzleSfx;
+
     public override void DoAction()
     {
         Interact();
@@ -36,6 +39,8 @@ public class ActivePuzzle1 : Interact
         GameObject obj = Instantiate(interactToActive, uiParent);
         RectTransform rt = obj.GetComponent<RectTransform>();
         rt.localScale = Vector3.zero;
+        AudioManager.Instance.PlayMusic(puzzelMusic);
+        AudioManager.Instance.PlaySFX(puzzleSfx);
         StartCoroutine(GrowObject(rt));
     }
 

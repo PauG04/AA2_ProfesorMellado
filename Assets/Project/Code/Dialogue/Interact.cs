@@ -13,6 +13,8 @@ public class Interact : MonoBehaviour
 
     [SerializeField] protected PlayerController playerController;
 
+    [SerializeField] private AudioClip talkAudio;
+
     protected int currentDialogue;
     protected Coroutine typingCoroutine;
     protected bool isTyping;
@@ -89,6 +91,10 @@ public class Interact : MonoBehaviour
         foreach (char c in text)
         {
             textBox.text += c;
+            if (!char.IsWhiteSpace(c) && talkAudio != null)
+            {
+                AudioManager.Instance.PlaySFX(talkAudio, Random.Range(0.9f, 1.2f));
+            }
             yield return new WaitForSeconds(0.03f); 
         }
         isTyping = false;

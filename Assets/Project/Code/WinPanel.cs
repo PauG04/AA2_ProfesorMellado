@@ -15,6 +15,7 @@ public class WinPanel : MonoBehaviour
     public void DestroyParent()
     {
         PlayerController.Instance.ChangeState(PlayerState.WAIT_TRAIN);
+        AudioManager.Instance.PlayMysteryMusic();
         Destroy(transform.parent.gameObject);
     }
 }

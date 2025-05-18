@@ -31,6 +31,7 @@ public class FadeController : MonoBehaviour
                 isFadingIn = false;
                 if (!string.IsNullOrWhiteSpace(sceneToLoad))
                 {
+                    AudioManager.Instance.StopSFX();
                     SceneManager.LoadScene(sceneToLoad);
                 }
             }

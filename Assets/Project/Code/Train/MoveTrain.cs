@@ -4,6 +4,10 @@ public class MoveTrain : MonoBehaviour
 {
    private Animator animator;
 
+    [SerializeField] private AudioClip door;
+    [SerializeField] private AudioClip trainArrive;
+    [SerializeField] private AudioClip trainLeave;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -14,6 +18,8 @@ public class MoveTrain : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            AudioManager.Instance.PlaySFX(door);
+            AudioManager.Instance.PlaySFX(trainLeave);
             LeaveTrain();
         }
     }
@@ -35,6 +41,7 @@ public class MoveTrain : MonoBehaviour
 
     public void StartTrainAnimation()
     {
+        AudioManager.Instance.PlaySFX(trainArrive);
         animator.SetBool("MoveTrain", true);
     }
 }

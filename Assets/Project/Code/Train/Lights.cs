@@ -6,7 +6,7 @@ public class Lights : MonoBehaviour
     [SerializeField] private Light2D globalLight;
 
     [SerializeField] private GameObject train1;
-    [SerializeField] private GameObject train2;
+    [SerializeField] private AudioClip audio;
 
     private void Start()
     {
@@ -17,14 +17,14 @@ public class Lights : MonoBehaviour
     public void LightOFF()
     {
         globalLight.intensity = 0f;
-        Invoke("LightOn", 1);
+        AudioManager.Instance.PlaySFX(audio);
+        Invoke("LightOn", 2);
     }
 
     public void LightOn()
     {
         globalLight.intensity = 1f;
         train1.SetActive(false);
-        train2.SetActive(true);
         PlayerController.Instance.ChangeState(PlayerState.WAIT);
     }
 }
