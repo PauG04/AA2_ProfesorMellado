@@ -31,6 +31,13 @@ public class Interact : MonoBehaviour
         NextDialogue();
     }
 
+    protected void DesactiveCanvas()
+    {
+        canvas.SetActive(false);
+        profesorIndication.SetActive(false);
+        NPCIndication.SetActive(false);
+    }
+
     public virtual void NextDialogue()
     {
         if (isTyping)

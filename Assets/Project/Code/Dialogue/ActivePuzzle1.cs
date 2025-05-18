@@ -10,6 +10,8 @@ public class ActivePuzzle1 : Interact
     [SerializeField] private AudioClip puzzelMusic;
     [SerializeField] private AudioClip puzzleSfx;
 
+    [SerializeField] private int puzzleID;
+
     public override void DoAction()
     {
         Interact();
@@ -28,7 +30,7 @@ public class ActivePuzzle1 : Interact
 
     public override void InteractObject()
     {
-        if (!PuzzleManager.Instance.GetCurrentPuzzleIsCompleted())
+        if (!PuzzleManager.Instance.GetCurrentPuzzleIsCompleted(puzzleID))
             base.InteractObject();
         else
             PlayerController.Instance.ChangeState(PlayerState.MOVE);
@@ -58,5 +60,6 @@ public class ActivePuzzle1 : Interact
         }
 
         target.localScale = finalScale;
+        DesactiveCanvas();
     }
 }

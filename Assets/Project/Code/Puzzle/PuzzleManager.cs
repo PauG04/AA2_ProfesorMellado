@@ -14,8 +14,10 @@ public class PuzzleManager : MonoBehaviour
     [HideInInspector] public int currentPuzzle;
 
     public List<int> maxPoints;
-    [HideInInspector] public List<int> puzzlePoints;
-    [HideInInspector] public List<bool> puzzleCompleted;
+    public List<int> puzzlePoints;
+    public List<bool> puzzleCompleted;
+
+    public int currentId;
 
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class PuzzleManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        DontDestroyOnLoad(gameObject);
 
         puzzlesCompleted = 0;
         points = 0;
@@ -40,11 +44,29 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    public void WinPuzzle(Transform parent)
+    public void ResetPuzzle()
     {
-        puzzleCompleted[currentPuzzle] = true;
-        points += puzzlePoints[currentPuzzle] * streak;
+        puzzlePoints.Clear();
+        puzzleCompleted.Clear();
+
+        puzzlesCompleted = 0;
+        points = 0;
+        streak = 0;
+        currentPuzzle = 0;
+
+        foreach (int puzzle in maxPoints)
+        {
+            puzzlePoints.Add(puzzle);
+            puzzleCompleted.Add(false);
+        }
+    }
+
+    public void WinPuzzle(Transform parent, int id)
+    {
+        puzzleCompleted[id] = true;
+        currentId = id;
         streak++;
+        points += puzzlePoints[id] * streak;
         puzzlesCompleted++;
         Instantiate(CanvasWin, parent);
     }
@@ -64,11 +86,12 @@ public class PuzzleManager : MonoBehaviour
 
     public int GetCurrentPuzzlePoints()
     {
-        return puzzlePoints[currentPuzzle];
+        return puzzlePoints[currentId];
     }
 
-    public bool GetCurrentPuzzleIsCompleted()
+    public bool GetCurrentPuzzleIsCompleted(int id)
     {
-        return puzzleCompleted[currentPuzzle];
+        return puzzleCompleted[id];
     }
+
 }

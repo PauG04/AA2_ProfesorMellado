@@ -5977,7 +5977,7 @@ MonoBehaviour:
   points: 0
   streak: 0
   currentPuzzle: 0
-  maxPoints: 19000000
+  maxPoints: 190000001e00000032000000
   puzzlePoints: 
   puzzleCompleted: 
 --- !u!4 &640067406
@@ -6105,7 +6105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openLogros: {fileID: 8300000, guid: a36aae60b9270a64991b33c9fe16da09, type: 3}
   startGame: {fileID: 8300000, guid: 9a0ffd5869ccaf046b954e2d96a57060, type: 3}
-  backButton: {fileID: 1979776053}
+  backButton:
+  - {fileID: 1979776053}
 --- !u!4 &765292223
 Transform:
   m_ObjectHideFlags: 0
@@ -15121,6 +15122,55 @@ MonoBehaviour:
   hoverClip: {fileID: 8300000, guid: d7225137294c3424b8ca973f2f56823a, type: 3}
   win: {fileID: 0}
   lose: {fileID: 0}
+  answerInput: {fileID: 0}
+  correctAnswer: 0
+  id: 0
+--- !u!1 &1977741321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977741323}
+  - component: {fileID: 1977741322}
+  m_Layer: 0
+  m_Name: PaintManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1977741322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977741321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb53efe32a50a04daed535c9af96272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniPaint: 
+  paint: 
+--- !u!4 &1977741323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977741321}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.301872, y: -1.7554176, z: -0.008101223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1979776053 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6218736811392907088, guid: 3eb77ef2da09f5e428b365710180d92a, type: 3}
@@ -15275,6 +15325,9 @@ MonoBehaviour:
   hoverClip: {fileID: 8300000, guid: d7225137294c3424b8ca973f2f56823a, type: 3}
   win: {fileID: 0}
   lose: {fileID: 0}
+  answerInput: {fileID: 0}
+  correctAnswer: 0
+  id: 0
 --- !u!1 &2100041273
 GameObject:
   m_ObjectHideFlags: 0
@@ -15672,3 +15725,4 @@ SceneRoots:
   - {fileID: 640067406}
   - {fileID: 765292223}
   - {fileID: 2100041275}
+  - {fileID: 1977741323}

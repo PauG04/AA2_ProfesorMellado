@@ -32,6 +32,7 @@ public class FadeController : MonoBehaviour
                 if (!string.IsNullOrWhiteSpace(sceneToLoad))
                 {
                     AudioManager.Instance.StopSFX();
+                    fadeImage.gameObject.SetActive(false);
                     SceneManager.LoadScene(sceneToLoad);
                 }
             }
@@ -45,6 +46,7 @@ public class FadeController : MonoBehaviour
             if (alpha <= 0f)
             {
                 isFadingOut = false;
+                fadeImage.gameObject.SetActive(false);
             }
         }
     }
@@ -62,10 +64,12 @@ public class FadeController : MonoBehaviour
         isFadingIn = true;
         isFadingOut = false;
         sceneToLoad = sceneName;
+        fadeImage.gameObject.SetActive(true);
     }
 
     public void StartFadeOut()
     {
+        fadeImage.gameObject.SetActive(true);
         fadeTimer = 0f;
         isFadingOut = true;
         isFadingIn = false;

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class UIScaleOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -8,6 +9,10 @@ public class UIScaleOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private AudioClip win;
     [SerializeField] private AudioClip lose;
     private Vector3 originalScale;
+
+    [SerializeField] private TMP_InputField answerInput;
+    [SerializeField] private int correctAnswer;
+    [SerializeField] private int id;
 
     void OnEnable()
     {
@@ -28,12 +33,29 @@ public class UIScaleOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void WinPuzzle(Transform parent)
     {
         AudioManager.Instance.PlaySFX(win);
-        PuzzleManager.Instance.WinPuzzle(parent);
+        PuzzleManager.Instance.WinPuzzle(parent, id);
     }
 
     public void LosePuzzle(Transform parent)
     {
         AudioManager.Instance.PlaySFX(lose);
         PuzzleManager.Instance.LosePuzzle(parent);
+    }
+
+    public void DetectTextIsCorrect(Transform parent)
+    {
+        string userInput = answerInput.text.Trim();
+
+        if (int.TryParse(userInput, out int playerAnswer))
+        {
+            if (playerAnswer == correctAnswer)
+            {
+                WinPuzzle(parent);
+            }
+            else
+            {
+                LosePuzzle(parent);
+            }
+        }
     }
 }

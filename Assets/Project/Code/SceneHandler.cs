@@ -6,7 +6,7 @@ public class SceneHandler : MonoBehaviour
     public static SceneHandler Instance { get; private set; }
     [SerializeField] private AudioClip openLogros;
     [SerializeField] private AudioClip startGame;
-    [SerializeField] private GameObject backButton;
+    [SerializeField] private GameObject[] backButton;
 
     private void Awake()
     {
@@ -23,6 +23,8 @@ public class SceneHandler : MonoBehaviour
 
     public void LoadSceneByName(string sceneName)
     {
+        PuzzleManager.Instance.ResetPuzzle();
+        PaintManager.Instance.ResetPaint();
         AudioManager.Instance.PlaySFX(startGame);
         SceneManager.LoadScene(sceneName);
     }
@@ -30,7 +32,8 @@ public class SceneHandler : MonoBehaviour
     public void ActiveLogo(GameObject _object)
     {
         AudioManager.Instance.PlaySFX(openLogros);
-        backButton.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        for(int i = 0; i < backButton.Length; i++)
+            backButton[i].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         _object.SetActive(true);
     }
 
