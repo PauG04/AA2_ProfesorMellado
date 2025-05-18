@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902a9ced9a396f8478cbff9dcc78f4cb, type: 3}
+  m_Name: NPC3Dialogue4
+  m_EditorClassIdentifier: 
+  dialogueType: 1
+  dialogueSpeaker: 1
+  dialogueText: "Un ruido\u2026 como un clic. No mecanico. Mas bien\u2026 como si
+    alguien hubiera apagado todo a proposito. Como si esto\u2026 no fuera un fallo"

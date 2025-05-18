@@ -67,6 +67,8 @@ public class Interact : MonoBehaviour
                 {
                     profesorIndication.SetActive(false);
                     NPCIndication.SetActive(true);
+                    if (dialogue.interactableName.Length == 0)
+                        NPCIndication.SetActive(false);
                 }
 
                 if (typingCoroutine != null) StopCoroutine(typingCoroutine);
